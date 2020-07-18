@@ -1,0 +1,32 @@
+<ion-header CLASS="background " class="color" >
+ 
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button text="" ></ion-back-button>
+    </ion-buttons>  
+    <ion-title class="fon">Add Task</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="color" >
+  
+  <ion-card class="cent" >
+    <ion-card class="in">
+      <ion-label  position="stacked" >Title</ion-label>
+      <ion-input type="text" [(ngModel)]="title"></ion-input>
+    </ion-card>
+    <ion-card class="in">
+      <ion-label  position="stacked" >Description</ion-label>
+      <ion-input type="textarea"  [(ngModel)]="description"></ion-input>
+    </ion-card>
+    <ion-card class="in">
+      <ion-label  position="stacked" >Last Date</ion-label>
+      <ion-datetime min="2020" max="2022" dispalyformat="MM/DD/YYYY"  [(ngModel)]="lastdate"></ion-datetime>
+    </ion-card>
+  </ion-card> 
+  
+  <ion-button expand="block" shape="round"   style="--background:#78C000"(click)="store()" > ADD </ion-button>
+
+
+
+</ion-content>

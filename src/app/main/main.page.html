@@ -1,0 +1,75 @@
+
+
+
+
+  <ion-card no-margin class="card">
+    
+  <ion-item class="bgc">
+    <ion-label class="font">
+      <h1 class="fon">Hola</h1>
+      <h1 class="fon"> Amigo 😇</h1>
+    </ion-label>
+    <ion-buttons slot ="end" class="button">
+      <ion-button fill="clear" slot="icon-only" (click)="logout()" class="bc">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+  
+  
+  <circle-progress class="cp"
+  [percent]="percent"
+  [radius]="100"
+  [showSubtitle]="true"
+  [subtitleFormat]="formatSubtitle" 
+  [showZeroOuterStroke] = "false"
+  [outerStrokeWidth]="16"
+  [innerStrokeWidth]="8"
+  [outerStrokeColor]="'#78C000'"
+  [innerStrokeColor]="'#C7E596'"
+  [animation]="true"
+  [animationDuration]="300"
+></circle-progress></ion-card>
+<ion-content  CLASS="background " >
+<ion-card class="card1">
+<ion-scroll scrollX="true" style="width:100%; height:200px;" >
+  <div class="inner" [style.width.px]="width">
+
+    <ion-card class="card1">
+      <div class="inner" [style.width.px]="width">
+      <ion-item-sliding *ngFor="let todo of todos" class="color">
+        
+        <ion-item  >
+           <ion-label class="card2">
+            <ion-text >
+            <h2 > {{todo.data().todo_title| uppercase }}</h2>
+            <h3 class="h3fon" > {{todo.data().todo_description}}</h3>
+            <p class="h3fon">  {{todo.data().todo_date}}</p>
+          </ion-text>
+          </ion-label>
+      
+       
+        </ion-item>
+      
+        <ion-item-options slide='end' class="slidcol">
+          <ion-item-option color="'#78C000'" (click)="markread(todo)">
+            <ion-icon name="checkmark"></ion-icon>
+          </ion-item-option>
+  
+        </ion-item-options>
+      </ion-item-sliding>
+      </div>
+    </ion-card>
+    
+ 
+      
+  </div>
+</ion-scroll>
+</ion-card>
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed" (click)="gotoAdd()" class="fab" >
+    <ion-fab-button   >
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
