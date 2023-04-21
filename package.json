@@ -28,7 +28,7 @@
     "cordova-android": "^8.1.0",
     "cordova-res": "^0.15.1",
     "firebase": "^7.16.0",
-    "firebase-tools": "^8.5.0",
+    "firebase-tools": "^11.28.0",
     "firebaseui": "^4.5.2",
     "firebaseui-angular": "^5.0.0",
     "ng-circle-progress": "^1.5.1",
